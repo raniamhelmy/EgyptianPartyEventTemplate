@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white__color: #fff;
+  --mainText__color: #222;
+  --secondText__color: rgb(244, 67, 54);
+  --black__color: #000;
+  --fontMerienda: "Merienda", cursive;
+  --fontMonoton: "Monoton", cursive;
+  --fontPerM: "Permanent Marker", cursive;
+
+}
+
+body {
+  font-family: var(--fontMerienda);
+  color: var(--mainText__color);
+  /* background: rgb(244, 67, 54);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 67, 54, 1) 29%,
+    rgba(255, 192, 203, 1) 65%,
+    rgb(250, 201, 201) 100%
+  ); */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/*******************************************NavBar Section*****************************************/
+#sideNavBar {
+  text-align: center;
+}
+
+#sideNavBar h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 30px;
+  /* color:#e90606; */
+  color: var(--secondText__color);
+}
+
+.nav-item {
+  margin-block: 0.3125rem;
+  /*To make the hover BG effect*/
+  background-image: linear-gradient(var(--white__color), var(--white__color));
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0.25rem 0.25rem 0;
+  transition: all 400ms ease-in;
+}
+
+.nav-item a {
+  color: #fff;
+  font-weight: 900;
+}
+
+.nav-item a:hover {
+  color: var(--secondText__color);
+}
+
+.nav-item:hover {
+  color: var(--secondButton__color);
+  background-size: 100% 100%;
+  opacity: 1;
+}
+
+.vertical-nav {
+  /* min-width: 16rem; */
+  width: 16rem;
+  min-height: 100vh;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 400ms linear;
+}
+
+#sidebarCollapse{
+color:var(--white__color);
+background-color:rgb(82, 0, 0); 
+;
+}
+
+#sidebarCollapse.btn:focus {
+  outline: 0;
+  box-shadow: unset;
+}
+
+/************************************************************************************************************/
+
+/***************************************************Content Section*****************************************/
+
+/*************Header******************/
+
+.back-GroundImg{
+  background-image: url(../Images/events-heavenly-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  font-size: 1rem;
+}
+
+.layer{
+  background-color: rgba(255, 0, 0, 0.5);
+  height: 100%;
+}
+
+.back-GroundImg h1{
+  font-family: var(--fontMonoton);
+  font-size: calc(20px + 3vw);
+}
+
+.page-content {
+  top:20%;
+  /* width: calc(100% - 17rem); */
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: fit-content;
+  margin: 0;
+}
+
+#content {
+  margin-left: 17rem;
+  /***padge****/
+  /* width: calc(50% - 17rem); */
+}
+
+
+/*********Details Section*********/
+
+.accordion {
+  background-color:rgb(126, 0, 0);
+  color:var(--white__color);
+  cursor: pointer;
+  padding: .625rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s linear;
+}
+
+
+.activeAccordion, .accordion:hover {
+  background-color:rgb(82, 0, 0); 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color:rgba(253, 213, 220, 0.795);
+  overflow: hidden;
+}
+
+
+/*********Duration Section*********/
+.durationB-GroundImg{
+  background-image: url(../Images/invitation-2508607__340.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  font-size: 1rem;
+}
+
+/*********Contact Section*********/
+#contact h6{
+  font-size:1.8rem; 
+}
+
+.list-inline-item{
+  cursor: pointer;
+  border:1px solid #222;
+  transition: all 400ms linear;
+}
+
+.list-inline-item:hover{
+  border: 1px solid rgb(82, 0, 0);
+  background-color: rgb(82, 0, 0);
+  color:var(--white__color);
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color:var(--secondText__color);
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgb(126  0 0 / 25%);
+}
+
+.form__button {
+  display: block;
+  width: fit-content;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0.9rem 2.3rem;
+  font-size: 1.2rem;
+  background-color:var(--secondText__color);
+  text-decoration: none;
+  transition: all 500ms ease;
+  cursor: pointer;
+  border-radius:0;
+}
+
+.form__button:hover{
+  background-color:rgb(82, 0, 0); 
+  color:#fff; 
+}
+
+#sendBtn{
+width: fit-content;
+margin: 0;
+
+}
+
+/**************************************************************************************************/
+
+/*******************************************RWD Section*****************************************/
+@media screen and (max-width: 1399.9808px) {
+}
+
+@media screen and (max-width: 1199.9808px) {
+}
+
+@media screen and (max-width: 991.9808px) {
+  /*insted of increase the height and affect the performance of the toggle animated speed, Add Padding*/
+  .nav-item {
+    padding-block: 10px;
+  }
+  .nav-item a {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767.9808px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    /* width: 100%; */
+    width: fit-content;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    /***padge****/
+    /* width: calc(100% - 17rem); */
+  }
+}
+
+@media screen and (max-width: 575.9808px) {
+}
+
+@media screen and (max-width: 450.9808px) {
+}
+
+@media screen and (max-width: 425.9808px) {
+  .vertical-nav {
+    width: 12rem;
+  }
+
+  #sideNavBar h1 {
+    font-family: "Permanent Marker", cursive;
+    font-size: 20px;
+  }
+
+   /* .page-content {
+    /* width: calc(100% - 10rem); 
+    margin-left: 10rem;
+    transition: all 0.4s;
+  }  */
+
+  #content.active {
+    margin-left: 12rem;
+    /***padge****/
+    /* width: calc(100% - 12rem); */
+  }
+  #content.activ {
+    width: fit-content;
+    color: #ffc0cb;
+  }
+}
+
+@media screen and (max-width: 344.9808px) {
+}
+/**************************************************************************************************/
