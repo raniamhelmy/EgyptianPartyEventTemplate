@@ -56,11 +56,11 @@ body {
 }
 
 .nav-item a {
-  color: #fff;
+  color:rgb(241, 210, 210);
   font-weight: 900;
 }
 
-.nav-item a:hover {
+.nav-item:hover a {
   color: var(--secondText__color);
 }
 
